@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fsto", "fsto\fsto.csproj", "{57FCF47F-4E2C-46C0-936C-188076029993}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserFSTO", "ParserFSTO\ParserFSTO.csproj", "{E49BCDEA-45C1-4C55-A830-F710A1A2A8DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{57FCF47F-4E2C-46C0-936C-188076029993}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57FCF47F-4E2C-46C0-936C-188076029993}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57FCF47F-4E2C-46C0-936C-188076029993}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E49BCDEA-45C1-4C55-A830-F710A1A2A8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E49BCDEA-45C1-4C55-A830-F710A1A2A8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E49BCDEA-45C1-4C55-A830-F710A1A2A8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E49BCDEA-45C1-4C55-A830-F710A1A2A8DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

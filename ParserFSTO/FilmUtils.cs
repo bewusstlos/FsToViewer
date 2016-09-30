@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
+using System.Net.Http;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace fsto
+namespace fsto.Parse
 {
     public static class FilmUtils
     {
@@ -25,7 +26,7 @@ namespace fsto
             return list;
         }
 
-        //??????? ?????????? ???????? ? ???????
+        //parser for search page
         static public List<Film> ParseSearchPage(string searchUri)
         {
             List<Film> filmList = new List<Film>();
@@ -48,7 +49,7 @@ namespace fsto
             return filmList;
         }
 
-        //??????? ???????? ??????????????? ???????
+        //parser for most popular films on fs.to
         static public List<Film> ParseMostViewed()
         {
             List<Film> mostViewedFilms = new List<Film>();
@@ -76,7 +77,7 @@ namespace fsto
             return mostViewedFilms;
         }
 
-        //??????? ??????? ? ?????????????? ??????????? ? ??????
+        //method for parsing additional info about each film
         static public Film SetInfoFromHtmlTable(Film film)
         {
 
@@ -93,7 +94,7 @@ namespace fsto
                 mCollection[2].Groups["genre"].Value, mCollection[3].Groups["genre"].Value,
                 mCollection[4].Groups["genre"].Value};
 
-                //????? "?????????" ??????? ??????? ????????
+                //sub method calls for each type of info about film
                 film.Genre = ParseGenreOrYear(info[0]);
                 film.Year = int.Parse(ParseGenreOrYear(info[1]));
                 film.Countries = (ParseCountries(info[2]));
@@ -123,6 +124,8 @@ namespace fsto
 
             result = result.Replace(@"<p class=""item - decription full"">", " ");
 
+            if (result == "")
+                result = "Description not avaliable";
             return result;
         }
 
@@ -180,22 +183,8 @@ namespace fsto
 
         public static string getResponse(string uri)
         {
-            StringBuilder sb = new StringBuilder();
-            byte[] buf = new byte[8192];
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
-            HttpWebResponse response =(HttpWebResponse) request.GetResponse();
-            Stream resStream = response.GetResponseStream();
-            int count = 0;
-            do
-            {
-                count = resStream.Read(buf, 0, buf.Length);
-                if (count != 0)
-                {
-                    sb.Append(Encoding.UTF8.GetString(buf, 0, count));
-                }
-            }
-            while (count > 0);
-            return sb.ToString();
+            HttpClient w = new HttpClient();
+            return w.GetStringAsync(uri).Result;
         }
     }
 }

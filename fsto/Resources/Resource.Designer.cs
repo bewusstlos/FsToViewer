@@ -91,8 +91,8 @@ namespace fsto
 			// aapt resource value: 0x7f070006
 			public const int Directors = 2131165190;
 			
-			// aapt resource value: 0x7f07000d
-			public const int ETSearch = 2131165197;
+			// aapt resource value: 0x7f07000c
+			public const int ETSearch = 2131165196;
 			
 			// aapt resource value: 0x7f070001
 			public const int FilmImage = 2131165185;
@@ -109,11 +109,11 @@ namespace fsto
 			// aapt resource value: 0x7f070009
 			public const int Rate = 2131165193;
 			
-			// aapt resource value: 0x7f07000f
-			public const int RootLayout = 2131165199;
+			// aapt resource value: 0x7f07000e
+			public const int RootLayout = 2131165198;
 			
-			// aapt resource value: 0x7f07000c
-			public const int SearchLayout = 2131165196;
+			// aapt resource value: 0x7f07000b
+			public const int SearchLayout = 2131165195;
 			
 			// aapt resource value: 0x7f070008
 			public const int TVRate = 2131165192;
@@ -121,11 +121,8 @@ namespace fsto
 			// aapt resource value: 0x7f070004
 			public const int Year = 2131165188;
 			
-			// aapt resource value: 0x7f07000e
-			public const int button = 2131165198;
-			
-			// aapt resource value: 0x7f07000b
-			public const int videoPlayer = 2131165195;
+			// aapt resource value: 0x7f07000d
+			public const int button = 2131165197;
 			
 			static Id()
 			{
@@ -144,10 +141,7 @@ namespace fsto
 			public const int FilmPreview = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int FilmWatch = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{

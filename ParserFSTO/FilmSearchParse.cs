@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace fsto
+namespace fsto.Parse
 {
     public struct Film
     {

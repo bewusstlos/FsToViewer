@@ -13,6 +13,8 @@ using Android.Views.Animations;
 using Square.Picasso;
 using Java.Lang;
 using System;
+using fsto;
+using fsto.Parse;
 
 namespace fsto
 {
@@ -90,7 +92,7 @@ namespace fsto
 
             SetContentView(Resource.Layout.Main);
 
-            pl = new ProgressDialog(this, 4);
+            pl = new ProgressDialog(this, 7);
             pl.SetTitle("Parsing Data...");
             pl.SetMessage("Please wait...");
             pl.Show();
@@ -202,8 +204,10 @@ namespace fsto
                     TextView filmDesc = new TextView(this);
                     var lpForFilmDesc = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.WrapContent);
                     lpForFilmDesc.SetMargins(0, 10, 0, 0);
-                    if (o.Description.Length > 0)
+                    if (o.Description.Length > 50)
                         filmDesc.Text = o.Description.Remove(50, o.Description.Length - 50) + "...";
+                    else
+                        filmDesc.Text = o.Description;
                     filmDesc.SetTextColor(Color.LightGray);
 
                     nameDescLayout.AddView(filmName, lpForFilmName);

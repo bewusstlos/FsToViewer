@@ -76,22 +76,18 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FilmPreview.cs" />
-    <Compile Include="FilmSearchParse.cs" />
-    <Compile Include="FilmUtils.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\FilmPreview.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\FilmWatch.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <None Include="GettingStarted.Xamarin" />
@@ -124,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\theme.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParserFSTO\ParserFSTO.csproj">
+      <Project>{e49bcdea-45c1-4c55-a830-f710a1a2a8da}</Project>
+      <Name>ParserFSTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

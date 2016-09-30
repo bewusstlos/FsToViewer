@@ -14,6 +14,7 @@ using Android.Views;
 using Android.Widget;
 
 using Square.Picasso;
+using fsto.Parse;
 
 namespace fsto
 {
@@ -38,13 +39,13 @@ namespace fsto
             var BPlayVideo = new Button(this);
             BPlayVideo.Text = "PLAY TRAILER";
 
-            string filmUri = Intent.GetStringExtra("FilmUri") ?? "Film Uri not avaliable!";
-            string filmName = Intent.GetStringExtra("FilmName") ?? "Film Name not avaliable!";
+            string filmUri = Intent.GetStringExtra("FilmUri");
+            string filmName = Intent.GetStringExtra("FilmName");
             string imageUri = ParseImage(filmUri);
-            string genre = Intent.GetStringExtra("Genre") ?? "Genre not avaliable!";
+            string genre = Intent.GetStringExtra("Genre");
             int positiveRate = Intent.GetIntExtra("PositiveRate", 0);
             int negativeRate = Intent.GetIntExtra("NegativeRate", 0);
-            string description = Intent.GetStringExtra("Description") ?? "Description not avaliable!";
+            string description = Intent.GetStringExtra("Description");
 
             Picasso.With(this).Load(imageUri).Into(IVFilmImage);
             TVFilmName.Text = filmName;
