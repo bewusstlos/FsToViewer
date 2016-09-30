@@ -92,7 +92,7 @@ namespace fsto
 
             SetContentView(Resource.Layout.Main);
 
-            pl = new ProgressDialog(this, 7);
+            pl = new ProgressDialog(this, 5);
             pl.SetTitle("Parsing Data...");
             pl.SetMessage("Please wait...");
             pl.Show();
