@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/FilmPreviewRoot"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            android:background="#009688">
+            <ImageView
+                android:id="@+id/FilmImage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:elevation="4dp"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+                <TextView
+                    android:id="@+id/FilmName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff" />
+                <TextView
+                    android:id="@+id/Genre"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/Year"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/Country"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/Directors"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <TextView
+                    android:id="@+id/Actors"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <RelativeLayout
+                    android:id="@+id/TVRate"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+                <ProgressBar
+                    android:id="@+id/Rate"
+                    style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:indeterminateBehavior="cycle"
+                    android:progressBackgroundTint="#ffff0000"
+                    android:progressTint="#ffadff2f"
+                    android:secondaryProgressTint="#ffff0000"
+                    android:backgroundTint="#ffff0000"
+                    android:elevation="4dp"
+                    android:indeterminateTint="#ffff0000"
+                    android:foregroundTint="#ffff0000" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/Description"
+            android:background="#009688"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:elevation="10dp"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</LinearLayout>
